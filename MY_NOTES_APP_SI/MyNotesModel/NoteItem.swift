@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
-class NoteItem {
+class NoteItem: ObservableObject {
     let id: UUID
     var name: String
     var noteDescription: String

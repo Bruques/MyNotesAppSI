@@ -26,7 +26,6 @@ struct MyNotesListView: View {
                    alignment: .top)
             .navigationTitle("Minhas notas")
         }
-        
     }
     
     var input: some View {
@@ -68,20 +67,40 @@ struct MyNotesListView: View {
     
     var list: some View {
         List {
-            ForEach(myNotes, id: \.id) { note in
-                HStack {
-                    Text(note.name)
-                    Spacer()
-                    Button(action: {
-                        note.isCompleted.toggle()
-                    }, label: {
-                        Image(systemName: note.isCompleted ? "checkmark.circle.fill" : "circle")
-                            .resizable()
-                            .frame(width: 24, height: 24)
-                    })
+            Section("Não concluidas") {
+                ForEach(myNotes.filter { !$0.isCompleted }, id: \.id) { note in
+                    noteRow(note: note)
+                }
+                .onDelete { offsets in
+                    deleteItem(in: myNotes.filter { !$0.isCompleted }, at: offsets)
                 }
             }
-            .onDelete(perform: deleteItem)
+            
+            Section("Concluidas") {
+                ForEach(myNotes.filter { $0.isCompleted }, id: \.id) { note in
+                    noteRow(note: note)
+                }
+                .onDelete { offsets in
+                    deleteItem(in: myNotes.filter { $0.isCompleted }, at: offsets)
+                }
+            }
+            
+        }
+    }
+    
+    func noteRow(note: NoteItem) -> some View {
+        HStack {
+            Text(note.name)
+            Spacer()
+            Button(action: {
+                note.isCompleted.toggle()
+            }, label: {
+                Image(systemName: note.isCompleted ? "checkmark.circle.fill" : "circle")
+                    .resizable()
+                    .frame(width: 24, height: 24)
+            })
+            .buttonStyle(PlainButtonStyle())
+            
         }
     }
     
@@ -93,15 +112,43 @@ struct MyNotesListView: View {
         clearInput()
     }
     
-    public func deleteItem(at offsets: IndexSet) {
+    private func deleteItem(in list: [NoteItem], at offsets: IndexSet) {
         for index in offsets {
-            let note = myNotes[index]
+            let note = list[index]
             modelContext.delete(note)
         }
     }
     
     private func clearInput() {
         search = ""
+    }
+}
+
+struct NoteDetailView: View {
+    @ObservedObject var note: NoteItem
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 16) {
+                Text("Editar Descrição")
+                    .font(.title2)
+                
+                TextField("Descrição", text: $note.noteDescription)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Button("Salvar") {
+                    dismiss() // Fecha a sheet ao salvar
+                }
+                .buttonStyle(.borderedProminent)
+                
+                Spacer()
+            }
+            .padding()
+            .navigationTitle(note.name)
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
