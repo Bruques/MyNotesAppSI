@@ -10,7 +10,7 @@ import SwiftData
 
 struct MyNotesListView: View {
     @Environment(\.modelContext) var modelContext
-    @Query(sort: \NoteItem.isCompleted) private var myNotes: [NoteItem]
+    @Query private var myNotes: [NoteItem]
     @State var search: String = ""
     
     var body: some View {
@@ -24,14 +24,15 @@ struct MyNotesListView: View {
             .frame(maxWidth: .infinity,
                    maxHeight: .infinity,
                    alignment: .top)
-            .navigationTitle("My notes")
+            .navigationTitle("Minhas notas")
         }
         
     }
     
     var input: some View {
         HStack(spacing: 16) {
-            TextField("Placeholder", text: $search)
+            TextField("Digite aqui", text: $search)
+                .font(.headline)
                 .padding()
                 .border(.black)
             Button {
@@ -70,6 +71,14 @@ struct MyNotesListView: View {
             ForEach(myNotes, id: \.id) { note in
                 HStack {
                     Text(note.name)
+                    Spacer()
+                    Button(action: {
+                        note.isCompleted.toggle()
+                    }, label: {
+                        Image(systemName: note.isCompleted ? "checkmark.circle.fill" : "circle")
+                            .resizable()
+                            .frame(width: 24, height: 24)
+                    })
                 }
             }
             .onDelete(perform: deleteItem)

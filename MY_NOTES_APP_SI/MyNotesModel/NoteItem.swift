@@ -12,13 +12,28 @@ import SwiftData
 class NoteItem {
     let id: UUID
     var name: String
+    var noteDescription: String
     var isCompleted: Bool
     
     init(name: String,
+         noteDescription: String,
          isCompleted: Bool) {
         self.id = UUID()
         self.name = name
+        self.noteDescription = noteDescription
         self.isCompleted = isCompleted
+    }
+    
+    func toggle() {
+        self.isCompleted.toggle()
+    }
+    
+    func changeName(to name: String) {
+        self.name = name
+    }
+    
+    func changeDescription(to description: String) {
+        self.noteDescription = description
     }
 }
 
