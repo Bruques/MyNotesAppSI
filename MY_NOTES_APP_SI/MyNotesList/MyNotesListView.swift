@@ -86,7 +86,9 @@ struct MyNotesListView: View {
     }
     
     private func newNote() {
-        let note = NoteItem(name: search, isCompleted: false)
+        let note = NoteItem(name: search, 
+                            noteDescription: "",
+                            isCompleted: false)
         modelContext.insert(note)
         clearInput()
     }

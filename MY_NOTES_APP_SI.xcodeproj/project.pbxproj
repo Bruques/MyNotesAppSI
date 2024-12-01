@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7990512CFCBB3000D67D07 /* MY_NOTES_APP_SITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7990502CFCBB3000D67D07 /* MY_NOTES_APP_SITests.swift */; };
 		0EB3E1012CFBBA5900B84D47 /* MY_NOTES_APP_SIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3E1002CFBBA5900B84D47 /* MY_NOTES_APP_SIApp.swift */; };
 		0EB3E1032CFBBA5900B84D47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3E1022CFBBA5900B84D47 /* ContentView.swift */; };
 		0EB3E1052CFBBA5A00B84D47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB3E1042CFBBA5A00B84D47 /* Assets.xcassets */; };
@@ -15,7 +16,19 @@
 		0EB3E1162CFBBB4800B84D47 /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB3E1152CFBBB4800B84D47 /* NoteItem.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0E7990522CFCBB3000D67D07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EB3E0F52CFBBA5900B84D47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EB3E0FC2CFBBA5900B84D47;
+			remoteInfo = MY_NOTES_APP_SI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0E79904E2CFCBB3000D67D07 /* MY_NOTES_APP_SITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MY_NOTES_APP_SITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E7990502CFCBB3000D67D07 /* MY_NOTES_APP_SITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MY_NOTES_APP_SITests.swift; sourceTree = "<group>"; };
 		0EB3E0FD2CFBBA5900B84D47 /* MY_NOTES_APP_SI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MY_NOTES_APP_SI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB3E1002CFBBA5900B84D47 /* MY_NOTES_APP_SIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MY_NOTES_APP_SIApp.swift; sourceTree = "<group>"; };
 		0EB3E1022CFBBA5900B84D47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +40,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0E79904B2CFCBB3000D67D07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EB3E0FA2CFBBA5900B84D47 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,10 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E79904F2CFCBB3000D67D07 /* MY_NOTES_APP_SITests */ = {
+			isa = PBXGroup;
+			children = (
+				0E7990502CFCBB3000D67D07 /* MY_NOTES_APP_SITests.swift */,
+			);
+			path = MY_NOTES_APP_SITests;
+			sourceTree = "<group>";
+		};
 		0EB3E0F42CFBBA5900B84D47 = {
 			isa = PBXGroup;
 			children = (
 				0EB3E0FF2CFBBA5900B84D47 /* MY_NOTES_APP_SI */,
+				0E79904F2CFCBB3000D67D07 /* MY_NOTES_APP_SITests */,
 				0EB3E0FE2CFBBA5900B84D47 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0EB3E0FD2CFBBA5900B84D47 /* MY_NOTES_APP_SI.app */,
+				0E79904E2CFCBB3000D67D07 /* MY_NOTES_APP_SITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +124,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0E79904D2CFCBB3000D67D07 /* MY_NOTES_APP_SITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E7990562CFCBB3000D67D07 /* Build configuration list for PBXNativeTarget "MY_NOTES_APP_SITests" */;
+			buildPhases = (
+				0E79904A2CFCBB3000D67D07 /* Sources */,
+				0E79904B2CFCBB3000D67D07 /* Frameworks */,
+				0E79904C2CFCBB3000D67D07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E7990532CFCBB3000D67D07 /* PBXTargetDependency */,
+			);
+			name = MY_NOTES_APP_SITests;
+			productName = MY_NOTES_APP_SITests;
+			productReference = 0E79904E2CFCBB3000D67D07 /* MY_NOTES_APP_SITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0EB3E0FC2CFBBA5900B84D47 /* MY_NOTES_APP_SI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0EB3E10C2CFBBA5A00B84D47 /* Build configuration list for PBXNativeTarget "MY_NOTES_APP_SI" */;
@@ -121,6 +169,10 @@
 				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					0E79904D2CFCBB3000D67D07 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 0EB3E0FC2CFBBA5900B84D47;
+					};
 					0EB3E0FC2CFBBA5900B84D47 = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -140,11 +192,19 @@
 			projectRoot = "";
 			targets = (
 				0EB3E0FC2CFBBA5900B84D47 /* MY_NOTES_APP_SI */,
+				0E79904D2CFCBB3000D67D07 /* MY_NOTES_APP_SITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0E79904C2CFCBB3000D67D07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EB3E0FB2CFBBA5900B84D47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,6 +217,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0E79904A2CFCBB3000D67D07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E7990512CFCBB3000D67D07 /* MY_NOTES_APP_SITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0EB3E0F92CFBBA5900B84D47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,7 +238,56 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0E7990532CFCBB3000D67D07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EB3E0FC2CFBBA5900B84D47 /* MY_NOTES_APP_SI */;
+			targetProxy = 0E7990522CFCBB3000D67D07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0E7990542CFCBB3000D67D07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BGLPVLYQQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bruno.marques.MY-NOTES-APP-SITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MY_NOTES_APP_SI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MY_NOTES_APP_SI";
+			};
+			name = Debug;
+		};
+		0E7990552CFCBB3000D67D07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BGLPVLYQQ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "bruno.marques.MY-NOTES-APP-SITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MY_NOTES_APP_SI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MY_NOTES_APP_SI";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		0EB3E10A2CFBBA5A00B84D47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -364,6 +481,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E7990562CFCBB3000D67D07 /* Build configuration list for PBXNativeTarget "MY_NOTES_APP_SITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E7990542CFCBB3000D67D07 /* Debug */,
+				0E7990552CFCBB3000D67D07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0EB3E0F82CFBBA5900B84D47 /* Build configuration list for PBXProject "MY_NOTES_APP_SI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
